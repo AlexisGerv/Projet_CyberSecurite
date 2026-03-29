@@ -13,7 +13,7 @@ Ce projet a pour but de configurer un environnement de laboratoire sécurisé (H
 
 ---
 
-## 🔍 3. Méthodologie
+## 3. Méthodologie
 
 ### Phase 1 : Reconnaissance et Énumération
 Après avoir validé la connectivité réseau via la commande `ping`, un scan de ports ciblé a été lancé pour identifier les services exposés sur la cible. Une attention particulière a été portée au port 21 (FTP).
@@ -29,7 +29,6 @@ L'outil Metasploit Framework a été utilisé pour automatiser l'exploitation de
 
 Commandes exécutées dans msfconsole :
 
-Bash
 use exploit/unix/ftp/vsftpd_234_backdoor
 set RHOSTS 192.168.56.104
 exploit
@@ -41,7 +40,9 @@ L'exploit a réussi avec succès, générant un accès direct (dumb shell) sur l
 
 Pour prouver la compromission totale du système, le fichier sensible contenant les empreintes cryptographiques des mots de passe a été lu via la commande cat /etc/shadow.
 
+
 4. Recommandations (Remédiation)
+
 Pour sécuriser ce serveur et empêcher de futures intrusions, les actions suivantes doivent être appliquées :
 
 Mettre à jour le service : Remplacer immédiatement vsftpd 2.3.4 par une version récente et corrigée.
