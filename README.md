@@ -40,8 +40,8 @@ L'exploit a réussi avec succès, générant un accès direct (dumb shell) sur l
 
 Pour prouver la compromission totale du système, le fichier sensible contenant les empreintes cryptographiques des mots de passe a été lu via la commande cat /etc/shadow.
 
-
-4. Recommandations (Remédiation)
+---
+## 4. Recommandations (Remédiation)
 
 Pour sécuriser ce serveur et empêcher de futures intrusions, les actions suivantes doivent être appliquées :
 
@@ -50,3 +50,4 @@ Mettre à jour le service : Remplacer immédiatement vsftpd 2.3.4 par une versio
 Changer de protocole : Privilégier des protocoles chiffrés comme SFTP (SSH File Transfer Protocol) au lieu du FTP classique qui fait transiter les données en clair sur le réseau.
 
 Filtrage réseau : Configurer un pare-feu (Firewall) pour restreindre l'accès au service de transfert de fichiers aux seules adresses IP de confiance.
+---
